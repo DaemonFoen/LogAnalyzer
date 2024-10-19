@@ -190,6 +190,11 @@
             <artifactId>jmh-generator-annprocess</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.tdunning</groupId>
+            <artifactId>t-digest</artifactId>
+        </dependency>
+
         <!-- Tests -->
         <dependency>
             <groupId>org.assertj</groupId>
@@ -416,6 +421,11 @@
                 <version>${rest-assured.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.tdunning</groupId>
+                <artifactId>t-digest</artifactId>
+                <version>3.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
