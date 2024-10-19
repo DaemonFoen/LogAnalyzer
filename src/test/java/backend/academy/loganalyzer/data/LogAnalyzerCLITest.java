@@ -25,7 +25,7 @@ class LogAnalyzerCLITest {
             "agent:Debian",
             "--filter",
             "method:GET"};
-        List<String> paths = List.of("src\\test\\resources\\logs\\logs1\\2024-08-31.txt", "src\\test\\resources\\logs\\logs2\\2024-08-31.txt", "src\\test\\resources\\logs\\logs3\\2024-08-31.txt");
+        List<String> paths = List.of("src/test/resources/logs/logs1/2024-08-31.txt", "src/test/resources/logs/logs2/2024-08-31.txt", "src/test/resources/logs/logs3/2024-08-31.txt");
 
         var result = logAnalyzer.parse(args);
 
