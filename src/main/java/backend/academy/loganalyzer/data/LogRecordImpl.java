@@ -19,9 +19,10 @@ public record LogRecordImpl(
     private static final Pattern LOG_PATTERN = Pattern.compile(
         "(\\S+) - (\\S+) \\[(.+?)] \"(\\S+) (\\S+) \\S+\" (\\d{3}) (\\d+) \"([^\"]*)\" \"([^\"]*)\"");
 
-    private static final DateTimeFormatter formatter =
+    private static final DateTimeFormatter FORMATTER =
         DateTimeFormatter.ofPattern("dd/MMM/yyyy:HH:mm:ss X", Locale.ENGLISH);
 
+    @SuppressWarnings("all")
     public static LogRecord of(String line) {
         Matcher matcher = LOG_PATTERN.matcher(line);
         if (matcher.matches()) {
@@ -33,7 +34,7 @@ public record LogRecordImpl(
             long bodyBytesSent = Long.parseLong(matcher.group(7));
             String userAgent = matcher.group(9);
 
-            LocalDateTime dateTime = LocalDateTime.parse(timeLocal, formatter);
+            LocalDateTime dateTime = LocalDateTime.parse(timeLocal, FORMATTER);
 
             return new LogRecordImpl(remoteAddr, dateTime, requestMethod, requestUrl, status, bodyBytesSent, userAgent);
         } else {

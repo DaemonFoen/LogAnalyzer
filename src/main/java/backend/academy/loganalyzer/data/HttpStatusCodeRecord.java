@@ -8,9 +8,18 @@ public record HttpStatusCodeRecord(int value, HttpStatusCode statusCode) {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         HttpStatusCodeRecord that = (HttpStatusCodeRecord) o;
         return value == that.value && statusCode == that.statusCode;
+    }
+
+    @Override
+    public int hashCode() {
+        return value + statusCode.hashCode();
     }
 }
