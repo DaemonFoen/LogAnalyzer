@@ -3,12 +3,12 @@ package backend.academy.loganalyzer.processing.operators;
 import backend.academy.loganalyzer.data.HttpStatusCode;
 import backend.academy.loganalyzer.data.HttpStatusCodeRecord;
 import backend.academy.loganalyzer.data.LogRecord;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StatusCountOperator implements MapOutputOperator<HttpStatusCodeRecord, Long> {
 
-    private final Map<HttpStatusCodeRecord, Long> commonStatuses = new HashMap<>();
+    private final Map<HttpStatusCodeRecord, Long> commonStatuses = new LinkedHashMap<>();
 
     @Override
     public LogRecord apply(LogRecord r) {

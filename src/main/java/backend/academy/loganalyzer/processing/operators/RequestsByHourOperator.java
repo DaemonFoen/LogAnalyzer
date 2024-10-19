@@ -1,12 +1,12 @@
 package backend.academy.loganalyzer.processing.operators;
 
 import backend.academy.loganalyzer.data.LogRecord;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class RequestsByHourOperator implements MapOutputOperator<Integer, Long> {
 
-    private final Map<Integer, Long> requestsByHour = new HashMap<>();
+    private final Map<Integer, Long> requestsByHour = new TreeMap<>();
 
     @Override
     public LogRecord apply(LogRecord r) {

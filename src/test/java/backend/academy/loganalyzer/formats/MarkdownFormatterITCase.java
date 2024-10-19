@@ -92,18 +92,18 @@ class MarkdownFormatterITCase {
 
             #### Запрашиваемые ресурсы
             |:--------------------:|-------------:|
-            | /downloads/product_3 | 73 |
             | /downloads/product_1 | 30285 |
             | /downloads/product_2 | 21104 |
+            | /downloads/product_3 | 73 |
 
             #### Коды ответа
             |:--------------------:|-------------:|
-            | 206  Partial Content | 186 |
-            | 403  Forbidden | 38 |
+            | 304  Not Modified | 13330 |
             | 200  OK | 4028 |
             | 404  Not Found | 33876 |
+            | 206  Partial Content | 186 |
+            | 403  Forbidden | 38 |
             | 416  Range Not Satisfiable | 4 |
-            | 304  Not Modified | 13330 |
             """,result);
     }
 }

@@ -1,12 +1,12 @@
 package backend.academy.loganalyzer.processing.operators;
 
 import backend.academy.loganalyzer.data.LogRecord;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ResourceCountOperator implements MapOutputOperator<String, Long> {
 
-    private final Map<String, Long> requestedResources = new HashMap<>();
+    private final Map<String, Long> requestedResources = new LinkedHashMap<>();
 
     @Override
     public LogRecord apply(LogRecord r) {
