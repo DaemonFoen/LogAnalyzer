@@ -8,6 +8,6 @@ import java.util.Map;
  * @param <K> Тип ключа метрики
  * @param <V> Тип значения метрики
  */
-public interface MapOutputOperator<K,V> extends Operator<Map<K,V>> {
+public interface MapOutputOperator<K, V> extends Operator<Map<K, V>> {
 
 }

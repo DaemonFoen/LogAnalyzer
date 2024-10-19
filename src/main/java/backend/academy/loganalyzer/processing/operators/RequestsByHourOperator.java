@@ -4,7 +4,7 @@ import backend.academy.loganalyzer.data.LogRecord;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RequestsByHourOperator implements MapOutputOperator<Integer,Long> {
+public class RequestsByHourOperator implements MapOutputOperator<Integer, Long> {
 
     private final Map<Integer, Long> requestsByHour = new HashMap<>();
 
