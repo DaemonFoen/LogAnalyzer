@@ -1,4 +1,4 @@
-package backend.academy.loganalyzer;
+package backend.academy.loganalyzer.data;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import backend.academy.loganalyzer.cli.LogAnalyzerCLI;
@@ -14,7 +14,7 @@ class LogAnalyzerCLITest {
     @Test
     void parseArgumentsTest() {
         String[] args = {"--path",
-            "src/main/resources/logs/**/2024-08-31.txt",
+            "src/test/resources/logs/**/2024-08-31.txt",
             "--from",
             "2015-05-17",
             "--to",
